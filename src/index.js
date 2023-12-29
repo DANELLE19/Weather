@@ -17,7 +17,7 @@ function refreshWeather(response) {
   temperatureElement.innerHTML = Math.round(temperature);
   iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-icon" />`;
 
-  getForecast(response.data.city):
+  getForecast(response.data.city);
 }
 
 function formatDate(date) {
@@ -75,7 +75,7 @@ function displayForecast() {
       forecastHtml =
         forecastHtml +
         `
- <div class="weather-forecast-day">
+      <div class="weather-forecast-day">
         <div class="weather-forecast-date">${formatDay(day.time)}</div>
 
         <img src="${day.condition.icon_url}" class="weather-forecast-icon" />
@@ -90,8 +90,8 @@ function displayForecast() {
       </div>
     `;
     }
-  });
- 
+  }); 
+       
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHtml;
 }
